@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://secdpvldrli8"
+path="res://.godot/imported/Iframe Don't Know How to Stop [UzLuGZ1i-aU].mp3-633d545f940ceb62f080636f85998ab3.mp3str"
+
+[deps]
+
+source_file="res://sounds/Iframe Don't Know How to Stop [UzLuGZ1i-aU].mp3"
+dest_files=["res://.godot/imported/Iframe Don't Know How to Stop [UzLuGZ1i-aU].mp3-633d545f940ceb62f080636f85998ab3.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
