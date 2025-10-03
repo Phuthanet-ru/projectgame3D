@@ -11,8 +11,8 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _process(delta):
-	steering = move_toward(steering, Input.get_axis("ui_right","ui_left") * MAX_STEER , delta * 2.5)
-	engine_force = Input.get_axis("ui_down", "ui_up") * ENGING_POWER
+	steering = move_toward(steering, -Input.get_axis("move_left","move_right") * MAX_STEER , delta * 2.5)
+	engine_force = -Input.get_axis("move_forward","move_back") * ENGING_POWER
    
 
 # Collecting coins
