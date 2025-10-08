@@ -1,0 +1,85 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdcr316wn6ysk"]
+
+[ext_resource type="Script" uid="uid://cmjr33dbv1v6d" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://bji7dwgf70jcg" path="res://scripts/parallax_background.gd" id="2_wu84c"]
+[ext_resource type="Texture2D" uid="uid://dtl7bwxjiwhk3" path="res://scenes/menupic.jpg" id="3_8ln24"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start_Game" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 404.0
+offset_top = -64.0
+offset_right = 462.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.8977938, 2.285125)
+size_flags_horizontal = 4
+text = "เริ่มเกม"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit_Game" type="Button" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 369.0
+offset_top = 36.00003
+offset_right = 459.0
+offset_bottom = 67.00003
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.216788, 2.4266381)
+text = "ออกจากเกม"
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -359.99988
+offset_top = -157.0
+offset_right = -213.99988
+offset_bottom = -134.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(2.1287098, 2.687398)
+text = "Death Road Kaelus"
+metadata/_edit_use_anchors_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+script = ExtResource("2_wu84c")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/ParallaxLayer"]
+position = Vector2(646, 276)
+scale = Vector2(0.45807293, 0.47434333)
+texture = ExtResource("3_8ln24")
+
+[node name="menu" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="pressed" from="CanvasLayer/Start_Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/Quit_Game" to="." method="_on_quit_game_pressed"]

@@ -1,21 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://vclaol3qtihl"]
+[gd_scene load_steps=4 format=3 uid="uid://dppa1peu3tiws"]
 
-[ext_resource type="Script" uid="uid://brki886ygwfp7" path="res://scripts/enemy.gd" id="1_882u1"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_7jlpp"]
+[ext_resource type="Script" uid="uid://ccvchiu8jlg3g" path="res://scripts/enemy.gd" id="1_882u1"]
+[ext_resource type="PackedScene" uid="uid://da4nkv8n2qhks" path="res://models/Red.glb" id="2_7jlpp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_41oev"]
-radius = 0.6230469
-height = 2.0874023
+radius = 1.2382813
+height = 3.6490479
 
 [node name="enemy" type="CharacterBody3D" groups=["enemy"]]
 script = ExtResource("1_882u1")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("CapsuleMesh_7jlpp")
+[node name="Red" parent="." instance=ExtResource("2_7jlpp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.2735492, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.043701172, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.09661865, 0)
 shape = SubResource("CapsuleShape3D_41oev")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
