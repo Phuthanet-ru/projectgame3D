@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://70feafe8fjcj"
-path="res://.godot/imported/colormap.png-1fa2215faa1548ca2d1b919ab554cc82.ctex"
+uid="uid://blctfmjk8nl6t"
+path="res://.godot/imported/colormap.png-51449d1300fed10adf9e4b733f61272b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://models/kenney_city-kit-roads/Models/FBX format/Textures/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-1fa2215faa1548ca2d1b919ab554cc82.ctex"]
+source_file="res://objects/kenney_city-kit-roads/Models/OBJ format/Textures/colormap.png"
+dest_files=["res://.godot/imported/colormap.png-51449d1300fed10adf9e4b733f61272b.ctex"]
 
 [params]
 
