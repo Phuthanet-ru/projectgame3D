@@ -10,7 +10,7 @@ const ENGINE_POWER = 300
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var camera_3d: Camera3D = $CameraPivot/Camera3D
 @onready var engine_sound: AudioStreamPlayer3D = $EngineSound
-
+@onready var reverse_camera: Camera3D = $CameraPivot/ReverseCamera
 
 var look_at
 
@@ -29,6 +29,9 @@ func _physics_process(delta):
 	camera_pivot.transform = camera_pivot.transform.interpolate_with(transform, delta * 5.0)
 	look_at = look_at.lerp(global_position + linear_velocity, delta * 5.0)
 	camera_3d.look_at(look_at)
+	reverse_camera.look_at(look_at)
+	_check_camera_switch()
+	
 
 	# เอฟเฟกต์เสียงเครื่องยนต์ 🌀
 	var speed = linear_velocity.length()
@@ -38,6 +41,12 @@ func _physics_process(delta):
 	# รีเซ็ตเมื่อหล่นจากฉาก
 	if position.y < -50:
 		get_tree().reload_current_scene()
+
+func _check_camera_switch():
+	if linear_velocity.dot(transform.basis.z) > 0:
+		camera_3d.current = true
+	else :
+		reverse_camera.current = true
 
 # เก็บเหรียญ
 func collect_coin():

@@ -309,16 +309,16 @@ label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
 [node name="coin2" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0237269, -13.979237, 30.1226)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0237269, -15.09618, 30.1226)
 
 [node name="coin3" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0800905, -13.985821, 43.1497)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0800905, -16.732769, 43.1497)
 
 [node name="coin4" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382838, -14.000593, 65.6529)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382838, -17.653893, 65.6529)
 
 [node name="coin5" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.518692, -14.0149, 83.455)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.518692, -19.14651, 83.455)
 
 [node name="Red_Yai" parent="." instance=ExtResource("14_a8y0u")]
 transform = Transform3D(89.53, 0, 44.5464, 0, 100, 0, -44.5464, 0, 89.53, -395.074, -15.8474, 171.195)
