@@ -3,7 +3,7 @@
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ahusb"]
 [ext_resource type="Script" uid="uid://djpme521r3cxe" path="res://scripts/main.gd" id="1_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://ceibpc7gvf4ge" path="res://scenes/player.tscn" id="3_jkv2x"]
-[ext_resource type="PackedScene" uid="uid://vclaol3qtihl" path="res://objects/enemy.tscn" id="3_trceg"]
+[ext_resource type="PackedScene" uid="uid://dppa1peu3tiws" path="res://objects/enemy.tscn" id="3_trceg"]
 [ext_resource type="Script" uid="uid://davslctbxbqvg" path="res://addons/road-generator/nodes/road_manager.gd" id="4_choun"]
 [ext_resource type="PackedScene" uid="uid://bc346822680h2" path="res://objects/kenney_city-kit/tile_low_2.tscn" id="4_o6xl0"]
 [ext_resource type="Script" uid="uid://bv3ainl18ttt5" path="res://addons/road-generator/nodes/road_container.gd" id="5_ya4ey"]
@@ -34,7 +34,7 @@ environment = ExtResource("1_ahusb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.238632)
 
 [node name="Nissan GTR" parent="." groups=["player"] instance=ExtResource("3_jkv2x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.448349, 0.0016832352, 0.051303864)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.448349, 1.0833063, 0.051303864)
 
 [node name="World" type="Node3D" parent="."]
 
