@@ -245,4 +245,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382838, -0.931118, 65.65295
 [node name="coin5" parent="." instance=ExtResource("11_ya4ey")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5186919, -0.94542503, 83.455025)
 
-[connection signal="coin_collected" from="Nissan GTR" to="." method="_on_nissan_gtr_coin_collected"]
+[connection signal="coin_collected" from="Nissan GTR" to="HUD" method="_on_nissan_gtr_coin_collected"]
