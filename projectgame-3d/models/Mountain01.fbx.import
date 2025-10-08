@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c1eynuky8iri0"
-path="res://.godot/imported/bridge-pillar-wide.fbx-a0b26535acf0f5d6450e705bee4e3abe.scn"
+uid="uid://eexvkq2xdflo"
+path="res://.godot/imported/Mountain01.fbx-c10295b1668d40562c8d4e718d350214.scn"
 
 [deps]
 
-source_file="res://models/kenney_city-kit-roads/Models/FBX format/bridge-pillar-wide.fbx"
-dest_files=["res://.godot/imported/bridge-pillar-wide.fbx-a0b26535acf0f5d6450e705bee4e3abe.scn"]
+source_file="res://models/Mountain01.fbx"
+dest_files=["res://.godot/imported/Mountain01.fbx-c10295b1668d40562c8d4e718d350214.scn"]
 
 [params]
 

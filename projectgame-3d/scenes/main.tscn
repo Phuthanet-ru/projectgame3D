@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bqqgyqafm7xwp"]
+[gd_scene load_steps=16 format=3 uid="uid://bqqgyqafm7xwp"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ahusb"]
 [ext_resource type="Script" uid="uid://djpme521r3cxe" path="res://scripts/main.gd" id="1_jkv2x"]
@@ -8,14 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://bc346822680h2" path="res://objects/kenney_city-kit/tile_low_2.tscn" id="4_o6xl0"]
 [ext_resource type="Script" uid="uid://bv3ainl18ttt5" path="res://addons/road-generator/nodes/road_container.gd" id="5_ya4ey"]
 [ext_resource type="Script" uid="uid://vrpv30v618xk" path="res://addons/road-generator/nodes/road_point.gd" id="6_eb6dy"]
-[ext_resource type="PackedScene" uid="uid://b4dlcl0o3t36d" path="res://scenes/mountain_01.tscn" id="8_a8y0u"]
+[ext_resource type="Material" uid="uid://dpashsuk5lr4x" path="res://addons/road-generator/resources/road_texture.material" id="6_trceg"]
 [ext_resource type="Script" uid="uid://bap462su1xjtx" path="res://scripts/hud.gd" id="11_apvpm"]
 [ext_resource type="PackedScene" uid="uid://dfpisimsgf5ce" path="res://objects/coin.tscn" id="11_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://cd7oyc56ehkx1" path="res://sprites/coin.png" id="13_jfda3"]
-[ext_resource type="PackedScene" uid="uid://dqi4xbqsd0rt" path="res://scenes/red.tscn" id="14_a8y0u"]
-[ext_resource type="Script" uid="uid://d2fnt4sbexcak" path="res://scripts/red.gd" id="15_jkv2x"]
-[ext_resource type="Script" uid="uid://bjbqrey0eacbg" path="res://scripts/redTiny.gd" id="16_jbj1t"]
-[ext_resource type="PackedScene" uid="uid://coyvdqw20f2po" path="res://scenes/mountain_02.tscn" id="16_muem4"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="17_tk810"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_a8y0u"]
@@ -27,9 +23,6 @@ font = ExtResource("17_tk810")
 font_size = 48
 shadow_color = Color(0, 0, 0, 0.376471)
 shadow_offset = Vector2(2, 2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jbj1t"]
-albedo_color = Color(0.333333, 0.141176, 0, 1)
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_jkv2x")
@@ -64,7 +57,7 @@ script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
 prior_mag = 0.0
-next_mag = 86.6277
+next_mag = 86.62765
 prior_pt_init = NodePath("../RP_002")
 next_pt_init = NodePath("../RP_003")
 
@@ -73,8 +66,8 @@ transform = Transform3D(0.99682236, 0.00037069002, -0.07965603, 0, 0.99998915, 0
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 54.9999
-next_mag = 54.9999
+prior_mag = 54.999947
+next_mag = 54.999947
 prior_pt_init = NodePath("../RP_014")
 next_pt_init = NodePath("../RP_001")
 
@@ -83,8 +76,8 @@ transform = Transform3D(0.7329267, 0.0019391439, -0.6803048, 0.0014085169, 0.999
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 86.6277
-next_mag = 97.305
+prior_mag = 86.62765
+next_mag = 97.305016
 prior_pt_init = NodePath("../RP_001")
 next_pt_init = NodePath("../RP_004")
 
@@ -93,8 +86,8 @@ transform = Transform3D(-0.38006923, 0.0036164108, -0.924951, 0.004584399, 0.999
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 97.305
-next_mag = 120.54
+prior_mag = 97.305016
+next_mag = 120.53964
 prior_pt_init = NodePath("../RP_003")
 next_pt_init = NodePath("../RP_005")
 
@@ -103,8 +96,8 @@ transform = Transform3D(-0.9920621, 0.0038157597, -0.12569001, 0.004023916, 0.99
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 120.54
-next_mag = 160.298
+prior_mag = 120.53964
+next_mag = 160.29848
 prior_pt_init = NodePath("../RP_004")
 next_pt_init = NodePath("../RP_006")
 
@@ -113,8 +106,8 @@ transform = Transform3D(-0.9692893, 0.0034455326, 0.24589859, 0.0032321548, 0.99
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 160.298
-next_mag = 119.756
+prior_mag = 160.29848
+next_mag = 119.755875
 prior_pt_init = NodePath("../RP_005")
 next_pt_init = NodePath("../RP_007")
 
@@ -123,8 +116,8 @@ transform = Transform3D(-0.78552395, 0.0022088406, 0.6188271, 0.002435825, 0.999
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 119.756
-next_mag = 111.593
+prior_mag = 119.755875
+next_mag = 111.59331
 prior_pt_init = NodePath("../RP_006")
 next_pt_init = NodePath("../RP_008")
 
@@ -133,8 +126,8 @@ transform = Transform3D(-0.7767258, 0.0007979112, 0.6298381, 0.0024288555, 0.999
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 111.593
-next_mag = 100.777
+prior_mag = 111.59331
+next_mag = 100.77668
 prior_pt_init = NodePath("../RP_007")
 next_pt_init = NodePath("../RP_009")
 
@@ -143,20 +136,18 @@ transform = Transform3D(-0.33876413, -0.0013709563, 0.9408701, 0.0029727893, 0.9
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 100.777
-next_mag = 71.2731
+prior_mag = 100.77668
+next_mag = 71.27314
 prior_pt_init = NodePath("../RP_008")
 next_pt_init = NodePath("../RP_010")
 
 [node name="RP_010" type="Node3D" parent="World/NavigationRegion3D/RoadManager/Road_001"]
 transform = Transform3D(0.8914433, -0.002356723, 0.4531255, 0.0028775106, 0.99999565, -0.00045997303, -0.4531225, 0.001713914, 0.8914463, 153.67633, -5.190336, -624.1736)
-[node name="RP_010" type="Node3D" parent="World/RoadManager/Road_001"]
-transform = Transform3D(0.891443, -0.00235672, 0.453126, 0.00287751, 0.999996, -0.000459973, -0.453122, 0.00171391, 0.891446, 153.676, -5.19034, -624.174)
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 71.2731
-next_mag = 63.8427
+prior_mag = 71.27314
+next_mag = 63.84272
 prior_pt_init = NodePath("../RP_009")
 next_pt_init = NodePath("../RP_011")
 
@@ -165,8 +156,8 @@ transform = Transform3D(0.5847648, -0.00035238793, -0.8112024, -1.2202805e-05, 0
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 63.8427
-next_mag = 59.0547
+prior_mag = 63.84272
+next_mag = 59.05473
 prior_pt_init = NodePath("../RP_010")
 next_pt_init = NodePath("../RP_012")
 
@@ -175,8 +166,8 @@ transform = Transform3D(0.1321644, 0.0035985217, -0.9912209, -0.0002201323, 0.99
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 59.0547
-next_mag = 64.1098
+prior_mag = 59.05473
+next_mag = 64.10983
 prior_pt_init = NodePath("../RP_011")
 next_pt_init = NodePath("../RP_013")
 
@@ -185,8 +176,8 @@ transform = Transform3D(0.9649994, 0.0030515813, 0.2622334, -0.0035401771, 0.999
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 64.1098
-next_mag = 75.7909
+prior_mag = 64.10983
+next_mag = 75.790886
 prior_pt_init = NodePath("../RP_012")
 next_pt_init = NodePath("../RP_014")
 
@@ -195,16 +186,13 @@ transform = Transform3D(0.9724777, 0.023404503, 0.23181626, 0, 0.99494183, -0.10
 script = ExtResource("6_eb6dy")
 traffic_dir = Array[int]([2, 2, 1, 1])
 lanes = Array[int]([2, 4, 4, 2])
-prior_mag = 75.7909
-next_mag = 75.7909
+prior_mag = 75.790886
+next_mag = 75.790886
 prior_pt_init = NodePath("../RP_013")
 next_pt_init = NodePath("../RP_002")
 
-[node name="Mountain01" parent="World" instance=ExtResource("8_a8y0u")]
-transform = Transform3D(500, 0, 0, 0, 500, 0, 0, 0, 500, -28.8527, -67.1312, 832.332)
-
 [node name="tile-low2" parent="World" instance=ExtResource("4_o6xl0")]
-transform = Transform3D(400, 0, 0, 0, 1, 0, 0, 0, 400, -1.17404, -6.87464, 1.34966)
+transform = Transform3D(400, 0, 0, 0, 1, 0, 0, 0, 400, -1.1740417, -6.8746414, 1.3496552)
 visible = false
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
@@ -256,34 +244,18 @@ label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
 [node name="coin" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6708, -0.942705, 177.422)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.670803, -0.94270515, 177.42242)
 
 [node name="coin2" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0237269, -0.909761, 30.1226)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02372694, -0.9097614, 30.122599)
 
 [node name="coin3" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0800905, -0.916346, 43.1497)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08009052, -0.9163456, 43.149723)
 
 [node name="coin4" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382838, -0.931118, 65.6529)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382838, -0.931118, 65.65295)
 
 [node name="coin5" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.518692, -0.945425, 83.455)
-
-[node name="Red_Yai" parent="." instance=ExtResource("14_a8y0u")]
-transform = Transform3D(89.53, 0, 44.5464, 0, 100, 0, -44.5464, 0, 89.53, -395.074, -15.8474, 171.195)
-script = ExtResource("15_jkv2x")
-
-[node name="Stage" type="CSGBox3D" parent="."]
-transform = Transform3D(-43.7917, 0, 89.9015, 0, 100, 0, -89.9015, 0, -43.7917, -397.087, -47.8271, 165.233)
-material_override = SubResource("StandardMaterial3D_jbj1t")
-size = Vector3(1, 0.546387, 1.92981)
-
-[node name="Red_Noi" parent="." instance=ExtResource("14_a8y0u")]
-transform = Transform3D(-0.660015, 0, -0.751253, 0, 1, 0, 0.751253, 0, -0.660015, 3.91616, -0.904243, 14.6345)
-script = ExtResource("16_jbj1t")
-
-[node name="Mountain02" parent="." instance=ExtResource("16_muem4")]
-transform = Transform3D(-6.28311, 0, -999.98, 0, 1000, 0, 999.98, 0, -6.28311, 144.283, -102.618, -247.694)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5186919, -0.94542503, 83.455025)
 
 [connection signal="coin_collected" from="Nissan GTR" to="HUD" method="_on_nissan_gtr_coin_collected"]
