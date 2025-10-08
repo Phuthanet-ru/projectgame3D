@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://coyvdqw20f2po"]
-
-[ext_resource type="PackedScene" uid="uid://b46pdf2732h6q" path="res://meshes/Mountain02.glb" id="1_7x4yh"]
-
-[node name="Mountain02" instance=ExtResource("1_7x4yh")]
-
-[node name="Landscape" parent="." index="0"]
-visible = false

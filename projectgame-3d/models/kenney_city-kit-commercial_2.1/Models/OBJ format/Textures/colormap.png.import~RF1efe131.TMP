@@ -2,13 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<< Updated upstream:projectgame-3d/models/kenney_city-kit-commercial_2.1/Models/OBJ format/Textures/colormap.png.import~RF1efe131.TMP
 uid="uid://bmyunuqeod6pv"
 path.s3tc="res://.godot/imported/colormap.png-caa23a6dff3c9be7e88f285296aec30a.s3tc.ctex"
-=======
-uid="uid://dtfn5gvmcav63"
-path.s3tc="res://.godot/imported/colormap.png-821641046799d05606b56a6afb98a9a0.s3tc.ctex"
->>>>>>> Stashed changes:projectgame-3d/objects/kenney_city-kit-commercial_2.1/Models/OBJ format/Textures/colormap.png.import
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true

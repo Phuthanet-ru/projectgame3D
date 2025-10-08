@@ -1,5 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4dlcl0o3t36d"]
-
-[ext_resource type="PackedScene" uid="uid://qk6hruype4ol" path="res://meshes/Mountain01.glb" id="1_rolkg"]
-
-[node name="Mountain01" instance=ExtResource("1_rolkg")]
