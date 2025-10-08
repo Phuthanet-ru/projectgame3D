@@ -270,6 +270,9 @@ transform = Transform3D(-0.660015, 0, -0.751253, 0, 1, 0, 0.751253, 0, -0.660015
 script = ExtResource("16_jbj1t")
 
 [node name="Mountain02" parent="." instance=ExtResource("16_muem4")]
-transform = Transform3D(-6.28311, 0, -999.98, 0, 1000, 0, 999.98, 0, -6.28311, 144.283, -102.618, -247.694)
+transform = Transform3D(-6.28311, 0, -999.98, 0, 1000, 0, 999.98, 0, -6.28311, 144.283, -128.569, -247.694)
+
+[node name="Red" parent="." instance=ExtResource("14_a8y0u")]
+transform = Transform3D(-1.71551, 0, -9.85175, 0, 10, 0, 9.85175, 0, -1.71551, 32.4196, -1.71505, -468.939)
 
 [connection signal="coin_collected" from="Nissan GTR" to="HUD" method="_on_nissan_gtr_coin_collected"]
