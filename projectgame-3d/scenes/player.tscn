@@ -1,6 +1,7 @@
-[gd_scene load_steps=23 format=4 uid="uid://ceibpc7gvf4ge"]
+[gd_scene load_steps=24 format=4 uid="uid://ceibpc7gvf4ge"]
 
 [ext_resource type="Script" uid="uid://br1k30d32naot" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="AudioStream" uid="uid://dl6un5ex1hcn3" path="res://sounds/start-nissan-gtr (mp3cut.net).mp3" id="2_g2els"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cy4gm"]
 resource_name = "tire"
@@ -549,4 +550,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0.7)
 top_level = true
 
 [node name="Camera3D" type="Camera3D" parent="CameraPivot"]
-transform = Transform3D(-1, 1.51808e-08, -8.60946e-08, 0, 0.984808, 0.173648, 8.74228e-08, 0.173648, -0.984808, 0, 1.70725, -4.81459)
+transform = Transform3D(-1, 1.5180792e-08, -8.609466e-08, -1.498092e-08, 0.9404841, 0.33983773, 8.612966e-08, 0.33983773, -0.9404841, -0.00949353, 2.1279573, -4.444088)
+current = true
+
+[node name="EngineSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_g2els")
