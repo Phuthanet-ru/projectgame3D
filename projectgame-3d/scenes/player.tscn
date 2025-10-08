@@ -558,5 +558,3 @@ transform = Transform3D(1, 0, 0, 0, 0.9402881, 0.34037957, 0, -0.34037957, 0.940
 
 [node name="EngineSound" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_g2els")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

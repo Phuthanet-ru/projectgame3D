@@ -1,8 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://bqqgyqafm7xwp"]
+[gd_scene load_steps=21 format=3 uid="uid://bqqgyqafm7xwp"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ahusb"]
 [ext_resource type="Script" uid="uid://djpme521r3cxe" path="res://scripts/main.gd" id="1_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://ceibpc7gvf4ge" path="res://scenes/player.tscn" id="3_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://dppa1peu3tiws" path="res://objects/enemy.tscn" id="3_trceg"]
 [ext_resource type="Script" uid="uid://davslctbxbqvg" path="res://addons/road-generator/nodes/road_manager.gd" id="4_choun"]
 [ext_resource type="PackedScene" uid="uid://bc346822680h2" path="res://objects/kenney_city-kit/tile_low_2.tscn" id="4_o6xl0"]
 [ext_resource type="Script" uid="uid://bv3ainl18ttt5" path="res://addons/road-generator/nodes/road_container.gd" id="5_ya4ey"]
@@ -762,6 +763,9 @@ transform = Transform3D(499.99625, 1.5828059, 1.11139, -1.5820543, 499.99734, -0
 [node name="tile-low2" parent="World" instance=ExtResource("4_o6xl0")]
 transform = Transform3D(400, 0, 0, 0, 1, 0, 0, 0, 400, -1.17404, -6.87464, 1.34966)
 visible = false
+
+[node name="enemy" parent="World" instance=ExtResource("3_trceg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6794031, -9.464699, -51.914783)
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.422618, -0.694272, 0.582563, 0, 0.642788, 0.766044, -0.906308, 0.323744, -0.271654, 0, 0, 0)

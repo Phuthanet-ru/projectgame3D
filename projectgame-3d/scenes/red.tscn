@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqi4xbqsd0rt"]
+[gd_scene load_steps=4 format=3 uid="uid://q21nmv1itsge"]
 
 [ext_resource type="PackedScene" uid="uid://da4nkv8n2qhks" path="res://models/Red.glb" id="1_gxcn4"]
+[ext_resource type="Script" uid="uid://d2fnt4sbexcak" path="res://scripts/red.gd" id="2_8flnf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_10bml"]
 radius = 1.28897
 height = 3.27128
 
-[node name="Red" instance=ExtResource("1_gxcn4")]
+[node name="Red" groups=["enemy"] instance=ExtResource("1_gxcn4")]
+script = ExtResource("2_8flnf")
 
 [node name="ระนาบ" parent="." index="0"]
 visible = false
@@ -16,9 +18,9 @@ bones/1/position = Vector3(0.0457344, 4.3058e-10, 1.59595e-16)
 bones/1/rotation = Quaternion(-0.619936, 0.340116, 0.619936, 0.340116)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/position = Vector3(-3.05581e-15, 0.732053, -3.09072e-08)
-bones/2/rotation = Quaternion(-0.469661, 0.00494939, 0.00897572, 0.882788)
+bones/2/rotation = Quaternion(-0.4692679, -8.4288395e-08, 2.9585449e-08, 0.88305587)
 bones/3/position = Vector3(0.0548813, -2.00154e-09, -2.08167e-16)
-bones/3/rotation = Quaternion(0.619936, 0.340116, 0.619936, -0.340116)
+bones/3/rotation = Quaternion(0.6199362, 0.3401163, 0.6199362, -0.34011635)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/position = Vector3(1.02518e-14, 0.732053, -2.69139e-08)
 

@@ -52,3 +52,8 @@ func _check_camera_switch():
 func collect_coin():
 	coins += 1
 	coin_collected.emit(coins)
+
+func die():
+	# เลือกว่าจะทำอะไรตอนตาย: ลบรถ / รีสตาร์ทฉาก / ไปหน้า Game Over
+	# ตัวอย่าง: รีโหลดฉาก
+	get_tree().reload_current_scene()
