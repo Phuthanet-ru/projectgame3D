@@ -28,14 +28,14 @@ shadow_offset = Vector2(2, 2)
 albedo_color = Color(0.333333, 0.141176, 0, 1)
 
 [node name="Main" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 27.340519, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.711227, 0)
 script = ExtResource("1_jkv2x")
 
 [node name="Environment" type="WorldEnvironment" parent="."]
 environment = ExtResource("1_ahusb")
 
-[node name="Nissan GTR" parent="." groups=["player"] instance=ExtResource("3_jkv2x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.44835, -25.767757, 0.0513039)
+[node name="Nissan GTR" parent="." instance=ExtResource("3_jkv2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40250587, -12.877392, 0.30395794)
 
 [node name="World" type="Node3D" parent="."]
 
@@ -265,6 +265,7 @@ shadow_enabled = true
 shadow_opacity = 0.75
 
 [node name="HUD" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 13
 anchor_left = 0.5
@@ -308,16 +309,16 @@ label_settings = SubResource("LabelSettings_38ys3")
 metadata/_edit_use_anchors_ = true
 
 [node name="coin2" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0237269, -0.909761, 30.1226)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0237269, -13.979237, 30.1226)
 
 [node name="coin3" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0800905, -0.916346, 43.1497)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0800905, -13.985821, 43.1497)
 
 [node name="coin4" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382838, -0.931118, 65.6529)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.382838, -14.000593, 65.6529)
 
 [node name="coin5" parent="." instance=ExtResource("11_ya4ey")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.518692, -0.945425, 83.455)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.518692, -14.0149, 83.455)
 
 [node name="Red_Yai" parent="." instance=ExtResource("14_a8y0u")]
 transform = Transform3D(89.53, 0, 44.5464, 0, 100, 0, -44.5464, 0, 89.53, -395.074, -15.8474, 171.195)

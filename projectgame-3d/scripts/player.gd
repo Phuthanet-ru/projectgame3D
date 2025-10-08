@@ -36,7 +36,7 @@ func _physics_process(delta):
 	engine_sound.volume_db = -3 + clamp(speed / 10.0, 0, 6)  # เพิ่มความดังนิดหน่อยตามความเร็ว
 
 	# รีเซ็ตเมื่อหล่นจากฉาก
-	if position.y < -10:
+	if position.y < -50:
 		get_tree().reload_current_scene()
 
 # เก็บเหรียญ
