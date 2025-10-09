@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0nrx1hqx1o4s"
+path="res://.godot/imported/emotion engine.mp3-9ab7ee5192b0a6d443a7a50cb24b2460.mp3str"
+
+[deps]
+
+source_file="res://sounds/emotion engine.mp3"
+dest_files=["res://.godot/imported/emotion engine.mp3-9ab7ee5192b0a6d443a7a50cb24b2460.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
