@@ -874,15 +874,18 @@ metadata/_edit_use_anchors_ = true
 
 [node name="HealthBar" type="TextureProgressBar" parent="HUD"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 3.040625
-anchor_bottom = 2.723611
-offset_left = 214.0
-offset_top = 48.99994
-offset_right = 418.0
-offset_bottom = 136.0
-scale = Vector2(0.05989797, 0.018587796)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.000008
+offset_top = -98.0
+offset_right = 4114.0
+offset_bottom = 1950.0
+grow_vertical = 0
+scale = Vector2(0.09626473, 0.025158387)
 texture_progress = ExtResource("14_dp3eg")
+tint_progress = Color(1, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="coin" type="Node3D" parent="."]
 
