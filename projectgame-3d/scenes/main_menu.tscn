@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpiugec0pogty"]
+[gd_scene load_steps=5 format=3 uid="uid://dpiugec0pogty"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_bqqt6"]
-[ext_resource type="Script" path="res://scripts/parallax_background.gd" id="2_wu84c"]
+[ext_resource type="Script" uid="uid://cmjr33dbv1v6d" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://bji7dwgf70jcg" path="res://scripts/parallax_background.gd" id="2_wu84c"]
 [ext_resource type="Texture2D" uid="uid://dtl7bwxjiwhk3" path="res://scenes/menupic.jpg" id="3_8ln24"]
+[ext_resource type="AudioStream" uid="uid://s504nt8qregb" path="res://sounds/DVRST - Close Eyes.mp3" id="4_wu84c"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -80,6 +81,7 @@ scale = Vector2(0.45807293, 0.47434333)
 texture = ExtResource("3_8ln24")
 
 [node name="menu" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_wu84c")
 
 [connection signal="pressed" from="CanvasLayer/Start_Game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/Quit_Game" to="." method="_on_quit_game_pressed"]
