@@ -1,8 +1,13 @@
 extends VehicleBody3D
 
 signal coin_collected
+signal health_changed(current_health)
+signal player_died
 
+@export var max_health: int = 100
+var health: int = max_health
 var coins = 0
+
 
 const MAX_STEER = 0.8
 const ENGINE_POWER = 300
@@ -11,6 +16,7 @@ const ENGINE_POWER = 300
 @onready var camera_3d: Camera3D = $CameraPivot/Camera3D
 @onready var engine_sound: AudioStreamPlayer3D = $EngineSound
 @onready var reverse_camera: Camera3D = $CameraPivot/ReverseCamera
+@onready var damage_sound = $DamageSound
 
 var look_at
 
@@ -52,3 +58,33 @@ func _check_camera_switch():
 func collect_coin():
 	coins += 1
 	coin_collected.emit(coins)
+
+
+
+# === ระบบเลือด ===
+func take_damage(amount: int):
+	if health <= 0:
+		return
+
+	health -= amount
+	emit_signal("health_changed", health)
+
+	# เอฟเฟกต์ตอนโดนชน
+	_spawn_damage_effect()
+	Audio.play("res://sounds/break.ogg")
+
+	if health <= 0:
+		emit_signal("player_died")
+		_explode_and_restart()
+
+func _spawn_damage_effect():
+	if camera_3d:
+		var trauma = 0.3 + randf() * 0.2
+		camera_3d.rotation_degrees += Vector3(randf() * 8 - 4, randf() * 8 - 4, 0) * trauma
+	if damage_sound:
+		damage_sound.play()
+
+func _explode_and_restart():
+	if get_tree():
+		await get_tree().create_timer(1.0).timeout
+	get_tree().reload_current_scene()

@@ -1,19 +1,20 @@
 extends Node3D
 
-@export var enemy_scene: PackedScene
 @export var player_path: NodePath
-@export var spawn_interval: float = 3.0
+@export var enemy_scene: PackedScene
+@export var spawn_interval: float = 10.0  # ทุก 5 วิจะเกิดใหม่ 1 ตัว
+@export var spawn_distance: float = 20.0 # ระยะห่างจาก Player ตอนเกิด
 
-var timer := 0.0
-var player: Node
+var player: Node3D
+var timer: float = 0.0
 
 func _ready():
-	if player_path and str(player_path) != "":
-		player = get_node(player_path)
-	else:
-		player = get_tree().get_root().find_child("Player", true, false)
+	player = get_node(player_path)
 
 func _process(delta):
+	if not player:
+		return
+	
 	timer += delta
 	if timer >= spawn_interval:
 		timer = 0.0
@@ -22,19 +23,19 @@ func _process(delta):
 func spawn_enemy():
 	if not enemy_scene or not player:
 		return
-
+	
 	var enemy = enemy_scene.instantiate()
-	add_child(enemy)
+	get_tree().current_scene.add_child(enemy)
+	
+	# ให้ศัตรูเกิด "ข้างหลัง" Player
+	var back_dir = -player.transform.basis.z.normalized()
+	var spawn_pos = player.global_position + back_dir * spawn_distance
+	enemy.global_position = spawn_pos
 
-	# 🔧 กำหนดเป้าหมายให้ enemy
-	enemy.player_path = player.get_path()
-
-	# หรือจะส่ง object ตรง ๆ ก็ได้ ถ้าใน enemy.gd มีฟังก์ชัน set_player()
+	# ส่งตำแหน่ง Player ให้ Enemy รู้จัก (เชื่อม path)
 	if enemy.has_method("set_player"):
 		enemy.set_player(player)
 
-	# ตั้งตำแหน่งเกิด (ตัวอย่างสุ่ม)
-	enemy.global_position = global_position + Vector3(randf() * 10.0 - 5.0, 0, randf() * 10.0 - 5.0)
-
+	print("Enemy spawned at: ", spawn_pos)
 	
 	

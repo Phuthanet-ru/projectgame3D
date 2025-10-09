@@ -13,6 +13,8 @@ extends Node3D
 
 var camera_rotation:Vector3
 var zoom = 10
+var trauma := 0.0
+var trauma_decay := 1.5
 
 @onready var camera = $Camera
 
@@ -21,6 +23,8 @@ func _ready():
 	camera_rotation = rotation_degrees # Initial rotation
 	
 	pass
+
+
 
 func _physics_process(delta):
 	
@@ -32,6 +36,14 @@ func _physics_process(delta):
 	camera.position = camera.position.lerp(Vector3(0, 0, zoom), 8 * delta)
 	
 	handle_input(delta)
+	if trauma > 0:
+		trauma -= trauma_decay * delta
+		var shake = pow(trauma, 2)
+		camera.rotation_degrees = Vector3(
+			randf_range(-shake, shake) * 5,
+			randf_range(-shake, shake) * 5,
+			0
+		)
 
 # Handle input
 
@@ -51,3 +63,6 @@ func handle_input(delta):
 	
 	zoom += Input.get_axis("zoom_in", "zoom_out") * zoom_speed * delta
 	zoom = clamp(zoom, zoom_maximum, zoom_minimum)
+
+func add_trauma(amount: float):
+	trauma = clamp(trauma + amount, 0, 1)
