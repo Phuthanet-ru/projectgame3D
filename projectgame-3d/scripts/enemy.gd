@@ -48,5 +48,11 @@ func _physics_process(delta):
 # === เมื่อศัตรูชน Player ===
 func _on_body_entered(body):
 	if player and body == player:
-		print("💥 Enemy hit player! Reloading scene...")
-		get_tree().reload_current_scene()
+		print("💥 Enemy hit player! Reloading scene (deferred)...")
+		call_deferred("_reload_scene_safe")
+
+func _reload_scene_safe():
+	get_tree().reload_current_scene()
+	
+func set_player(p):
+	player = p

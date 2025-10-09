@@ -43,10 +43,9 @@ player_path = NodePath("../Nissan GTR")
 
 [node name="EnemySpawner" type="Node3D" parent="." groups=["enemy"]]
 script = ExtResource("5_dp3eg")
-player_path = NodePath("../Nissan GTR")
 enemy_scene = ExtResource("3_trceg")
+player_path = NodePath("../Nissan GTR")
 spawn_interval = 2.5
-spawn_distance = -500.0
 
 [node name="World" type="Node3D" parent="."]
 
