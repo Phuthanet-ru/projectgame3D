@@ -1,11 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqqgyqafm7xwp"]
+[gd_scene load_steps=20 format=3 uid="uid://bqqgyqafm7xwp"]
 
 [ext_resource type="Environment" uid="uid://bqnqgflivjvue" path="res://scenes/main-environment.tres" id="1_ahusb"]
 [ext_resource type="Script" uid="uid://djpme521r3cxe" path="res://scripts/main.gd" id="1_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://ceibpc7gvf4ge" path="res://scenes/player.tscn" id="3_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://vclaol3qtihl" path="res://objects/enemy.tscn" id="3_trceg"]
 [ext_resource type="Script" uid="uid://davslctbxbqvg" path="res://addons/road-generator/nodes/road_manager.gd" id="4_choun"]
-[ext_resource type="PackedScene" uid="uid://bc346822680h2" path="res://objects/kenney_city-kit/tile_low_2.tscn" id="4_o6xl0"]
 [ext_resource type="Script" uid="uid://8lga4xr60c5a" path="res://scripts/enemy_spawner.gd" id="5_dp3eg"]
 [ext_resource type="Script" uid="uid://bv3ainl18ttt5" path="res://addons/road-generator/nodes/road_container.gd" id="5_ya4ey"]
 [ext_resource type="Script" uid="uid://vrpv30v618xk" path="res://addons/road-generator/nodes/road_point.gd" id="6_eb6dy"]
@@ -42,19 +41,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40250587, -12.877392, 0.30
 transform = Transform3D(-0.8441314, 0, 0.5361364, 0, 1, 0, -0.5361364, 0, -0.8441314, 13.384556, -7.8844643, -146.8547)
 player_path = NodePath("../Nissan GTR")
 
-[node name="EnemySpawner" type="Node3D" parent="."]
+[node name="EnemySpawner" type="Node3D" parent="." groups=["enemy"]]
 script = ExtResource("5_dp3eg")
 player_path = NodePath("../Nissan GTR")
 enemy_scene = ExtResource("3_trceg")
+spawn_interval = 2.5
+spawn_distance = -500.0
 
 [node name="World" type="Node3D" parent="."]
 
 [node name="Mountain01" parent="World" instance=ExtResource("8_a8y0u")]
 transform = Transform3D(499.99625, 1.5828059, 1.11139, -1.5820543, 499.99734, -0.3406241, -1.1124593, 0.33711487, 499.99863, -28.8527, -67.1312, 832.332)
-
-[node name="tile-low2" parent="World" instance=ExtResource("4_o6xl0")]
-transform = Transform3D(400, 0, 0, 0, 1, 0, 0, 0, 400, -1.17404, -6.87464, 1.34966)
-visible = false
 
 [node name="RoadManager" type="Node3D" parent="World"]
 script = ExtResource("4_choun")

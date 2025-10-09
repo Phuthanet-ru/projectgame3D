@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export var player_path: NodePath
 @export var speed: float = 30.0
-@export var gravity: float = 20.0
+@export var gravity: float = 1.0
 @export var detect_range: float = 500.0
 
 @onready var area: Area3D = $Area3D
