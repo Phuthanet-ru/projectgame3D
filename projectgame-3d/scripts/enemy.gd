@@ -39,7 +39,7 @@ func _physics_process(delta):
 	if dist < detect_range:
 		var dir = (player.global_position - global_position).normalized()
 		dir.y = 0
-		velocity.x = dir.x * speed
+		
 		velocity.z = dir.z * speed
 		look_at(player.global_position, Vector3.UP)
 	else:
