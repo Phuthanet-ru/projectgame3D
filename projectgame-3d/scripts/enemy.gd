@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @export var player_path: NodePath
-@export var speed: float = 50.0
+@export var speed: float = 40.0
 @export var gravity: float = 1.0
 @export var detect_range: float = 500.0
 @export var damage: int = 20
